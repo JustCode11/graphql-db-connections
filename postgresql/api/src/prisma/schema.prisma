@@ -1,0 +1,23 @@
+datasource db {
+    provider = "postgresql"
+    url      = "postgresql://user:yourPassword@localhost:5432/db"
+}
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+model Comment {
+    id        Int      @id @default(autoincrement())
+    content   String
+    author    Author   @relation(fields: [authorId], references: [id])
+    authorId  Int
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+model Author {
+    id       Int       @id @default(autoincrement())
+    name     String    @unique
+    comments Comment[]
+}

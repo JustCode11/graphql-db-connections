@@ -1,0 +1,23 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "Adrian Fonat",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^3.9.0",
+    "apollo-server-core": "^3.6.2",
+    "apollo-server-express": "^3.6.2",
+    "express": "^4.17.2",
+    "graphql": "^16.3.0",
+    "http": "*",
+    "nodemon": "^2.0.15",
+    "prisma": "^3.9.0"
+  }
+}

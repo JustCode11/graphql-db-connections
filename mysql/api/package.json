@@ -1,0 +1,25 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Adrian Fonat",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-core": "^3.6.2",
+    "apollo-server-express": "^3.6.2",
+    "express": "^4.17.2",
+    "graphql": "^16.3.0",
+    "http": "*",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "sequelize": "^6.14.1",
+    "sequelize-cli": "^6.4.1",
+    "sqlite3": "^5.0.2"
+  }
+}
