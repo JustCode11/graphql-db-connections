@@ -9,4 +9,4 @@ Sequelize ORM and for the postgresql example i used Prisma ORM.
 
 ## ER-Diagram
 
-![ER-Diagram](/images/tableRelation.png)
+![ER-Diagram](/images/tableEdit.png)
