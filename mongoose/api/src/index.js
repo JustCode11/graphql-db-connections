@@ -12,7 +12,6 @@ const { connectToMongoDB } = require('./db');
 const { seedAuthorsDB, seedCommentsDB } = require('./seeds');
 
 const port = process.env.PORT || 4000;
-//const DB_HOST = process.env.DB_HOST;
 const DB_HOST = "mongodb://localhost:27017/mongodbconnection";
 
 async function startApolloServer() {
@@ -20,7 +19,6 @@ async function startApolloServer() {
     const httpServer = http.createServer(app);
 
     // Connect to the database
-    //db.connect(DB_HOST);
     connectToMongoDB(DB_HOST);
 
     // seed data
@@ -42,9 +40,6 @@ async function startApolloServer() {
     // Apply the Apollo GraphQL middleware and set the path to /api
     server.applyMiddleware({ app, path: '/api' });
 
-    /*app.listen({ port }, () => console.log(
-        `GraphQL Server running at http://localhost:${port}${server.graphqlPath}`
-    ));*/
     await new Promise(resolve => httpServer.listen({ port }, resolve));
     console.log(`GraphQL Server running at http://localhost:${port}${server.graphqlPath}`)
 }
